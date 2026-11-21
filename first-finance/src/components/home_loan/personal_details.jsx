@@ -40,7 +40,7 @@ const [user, setUser] = useState("")
                         </div>
                     </div>
                     
-                    <div className="submit-btn-container"><button >Submit</button></div>
+                    <div className="submit-btn-container"><button >Save & Next</button></div>
                 </div>
             </main>
         </>

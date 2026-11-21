@@ -32,12 +32,33 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.front-container>div>h4 {
+.front-container>div>p>p{
+  width: 100%;
+  font-size: small;
+  line-height: 1;
+  word-wrap: break-word;
+}
+
+.front-container>div>p{
+  width: 70%;
+  height: 40px;
+  align-content: center;
+  padding: 0 0 0 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.front-container>div>h5 {
   align-content: center;
 }
 
+.front-container>div>h5>p{
+  font-size: small;
+}
+
 .front-container>div>textarea {
-  width: 300px;
+  width: 70%;
   height: 70px;
   padding-left: 10px;
   border: none;
