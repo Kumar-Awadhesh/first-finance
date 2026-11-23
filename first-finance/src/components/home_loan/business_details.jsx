@@ -9,6 +9,7 @@ const BusinessDetails = () => {
         <>
             <main className="loan-container">
                 <div className="form-container">
+                    <h3 className="form-header">Professional Details</h3>
                     <div className="front-container">
                         <div>
                             <h5>Firm Name :</h5>

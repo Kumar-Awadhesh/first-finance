@@ -9,6 +9,7 @@ const HomeLoanDetails = () => {
         <>
             <main className="loan-container">
                 <div className="form-container">
+                    <h3 className="form-header">Home Loan and Home Loan Type</h3>
                     <div className="front-container">
                         <div>
                             <h5>Home Loan Type :</h5>

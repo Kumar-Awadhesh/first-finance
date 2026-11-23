@@ -9,6 +9,7 @@ const DocumentUpload = () => {
         <>
             <main className="loan-container">
                 <div className="form-container">
+                    <h3 className="form-header">Document Upload</h3>
                     <div className="front-container">
                         <div>
                             <h5>Identity & Address Proof :</h5>

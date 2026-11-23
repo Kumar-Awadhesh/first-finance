@@ -100,3 +100,10 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.form-header{
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+}
