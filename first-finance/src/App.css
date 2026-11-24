@@ -1,3 +1,14 @@
+.navbar-brand{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.navbar-brand:hover{
+  cursor: pointer;
+  padding: 5px;
+  background-color: lightgray;
+}
+
 .card-img-overlay{
   text-align: center;
 }
@@ -7,10 +18,16 @@
 }
 
 .loan-container{
-  width: 80%;
+  width: 90%;
   box-sizing: border-box;
   margin: auto;
   margin-top: 50px;
+  border: 1px solid grey;
+}
+
+.front-container{
+  width: 90%;
+  margin: auto;
 }
 
 .front-container>div {

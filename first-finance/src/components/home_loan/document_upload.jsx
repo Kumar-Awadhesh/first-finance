@@ -1,7 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const DocumentUpload = () => {
+    const navigate = useNavigate();
+
+
+    const documentUpload = () => {
+        navigate('#')
+    }
 
 
 

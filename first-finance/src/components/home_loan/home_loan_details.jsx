@@ -1,8 +1,15 @@
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
 
 const HomeLoanDetails = () => {
     const [user, setUser] = useState("");
+    const navigate = useNavigate();
+
+
+    const homeLoanSubmission = () => {
+        navigate("/personal_details")
+    }
 
 
     return (
@@ -22,11 +29,11 @@ const HomeLoanDetails = () => {
                         </div>
                         <div>
                             <h5>Estimated Property Value :</h5>
-                            <input type="number" placeholder="Enter property value" value={user} onChange={(e) => userRegistration("licence_number", e.target.value)} />
+                            <input type="number" placeholder="Enter property value" />
                         </div>
                         <div>
                             <h5>Loan Amount :</h5>
-                            <input type="number" placeholder="Enter loan amount required" value={user} onChange={(e) => userRegistration("date_of_birth", e.target.value)} />
+                            <input type="number" placeholder="Enter loan amount required" />
                         </div>
                         <div>
                             <h5>Loan Tenure :</h5>
@@ -42,7 +49,7 @@ const HomeLoanDetails = () => {
                         </div>
                     </div>
 
-                    <div className="submit-btn-container"><button >Save & Next</button></div>
+                    <div className="submit-btn-container"><button onClick={homeLoanSubmission} >Save & Next</button></div>
                 </div>
             </main>
         </>

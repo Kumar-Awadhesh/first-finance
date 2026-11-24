@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const BusinessDetails = () => {
     const [user, setUser] = useState("");
+    const navigate = useNavigate();
+
+
+    const businessDetailsSubmission = () => {
+        navigate('/co-applicant_details')
+    }
 
 
     return (
@@ -33,7 +40,7 @@ const BusinessDetails = () => {
                         </div>
                     </div>
 
-                    <div className="submit-btn-container"><button >Save & Next</button></div>
+                    <div className="submit-btn-container"><button onClick={businessDetailsSubmission} >Save & Next</button></div>
                 </div>
             </main>
         </>

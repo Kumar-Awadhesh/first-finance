@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const SalaryDetails = () => {
     const [user, setUser] = useState("");
+    const navigate = useNavigate();
+
+
+    const salarySubmission = () => {
+        navigate('/co-applicant_details')
+    }
 
 
     return (
@@ -42,7 +49,7 @@ const SalaryDetails = () => {
                         </div>
                     </div>
 
-                    <div className="submit-btn-container"><button >Save & Next</button></div>
+                    <div className="submit-btn-container"><button onClick={salarySubmission} >Save & Next</button></div>
                 </div>
             </main>
         </>

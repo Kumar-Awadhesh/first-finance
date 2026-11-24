@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const Profession = () => {
     const [user, setUser] = useState("")
+    const navigate = useNavigate();
+
+
+    const professionSubmission = () => {
+        navigate('#')
+    }
 
 
     return (
@@ -21,7 +28,7 @@ const Profession = () => {
                         </div>
                     </div>
 
-                    <div className="submit-btn-container"><button >Save & Next</button></div>
+                    <div className="submit-btn-container"><button onClick={professionSubmission} >Save & Next</button></div>
                 </div>
             </main>
         </>

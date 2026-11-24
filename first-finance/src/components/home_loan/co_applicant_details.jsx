@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const CoApplicantDetails = () => {
-const [user, setUser] = useState("")
+const [user, setUser] = useState("");
+const navigate = useNavigate();
+
+
+    const coApplicantDetailsSubmission = () => {
+        navigate('/document_upload')
+    }
 
 
     return (
@@ -44,7 +51,7 @@ const [user, setUser] = useState("")
                         </div>
                     </div>
                     
-                    <div className="submit-btn-container"><button >Save & Next</button></div>
+                    <div className="submit-btn-container"><button onClick={coApplicantDetailsSubmission} >Save & Next</button></div>
                 </div>
             </main>
         </>
