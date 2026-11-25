@@ -9,6 +9,7 @@ import SalaryDetails from './components/home_loan/salary_details'
 import BusinessDetails from './components/home_loan/business_details'
 import CoApplicantDetails from './components/home_loan/co_applicant_details'
 import DocumentUpload from './components/home_loan/document_upload'
+import LoanDetails from './components/home_loan/loan_Details'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/home_loan_details' element={<HomeLoanDetails/>} />
+        <Route path='/loan_details' element={<LoanDetails/>} />
         <Route path='/personal_details' element={<PersonalDetails/>} />
         <Route path='/profession' element={<Profession/>} />
         <Route path='/salary_details' element={<SalaryDetails/>} />
