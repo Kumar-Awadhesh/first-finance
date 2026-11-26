@@ -8,18 +8,22 @@ const LoanDetails = () => {
     const navigate = useNavigate();
 
 
+    const loanData = JSON.parse(localStorage.getItem("Loan"))
     useEffect(() => {
-        const loanData = JSON.parse(localStorage.getItem("Loan"))
-        setLoanTenure(loanData)
+        console.log(loanData)
+        const loanOffered = (Number(loanData[0]?.propertyValue) * 80 / 100)
+        const interest = Number(loanOffered * 12 / 100 * 1 / 12)
+        const emi = Number(Math.ceil(loanOffered / 60) )
+        setLoanEmi(interest + emi)
+        setEliginleLoan(loanOffered)
     },[])
-
+    console.log(loanEmi)
 
     const loanDetailsSubmission = () => {
         navigate('/personal_details')
     }
 
     
-    console.log(loanTenure);
 
 
     return (
@@ -30,18 +34,43 @@ const LoanDetails = () => {
                     <div className="front-container">
                         <div>
                             <h5>Home Loan Type :</h5>
+                            <h5>
+                                {loanData[0]?.homeLoanType}
+                                <p>Loan requested for new home purchase</p>
+                            </h5>
                         </div>
                         <div>
                             <h5>Estimated Property Value :</h5>
+                            <h5>{loanData[0]?.propertyValue}
+                                <p>Purchased property estimated value</p>
+                            </h5>
+                        </div>
+                        <div>
+                            <h5>Loan Requested :</h5>
+                            <h5>{loanData[0]?.loanAmount}
+                                <p>Home loan amount requested</p>
+                            </h5>
                         </div>
                         <div>
                             <h5>Eligible Loan Amount :</h5>
+                            <h5>
+                                {eligibleLoan}
+                                <p>Loan eligibilities 80% of property value</p>
+                            </h5>
                         </div>
                         <div>
                             <h5>Loan Tenure :</h5>
+                            <h5>
+                                {loanData[0]?.loanTenure} Years
+                                <p>Total loan tenure</p>
+                            </h5>
                         </div>
                         <div>
                             <h5>Monthly EMI :</h5>
+                            <h5>
+                                {loanEmi}
+                                <p>EMI per month with included interest</p>
+                            </h5>
                         </div>
                     </div>
 

@@ -16,7 +16,6 @@ const HomeLoanDetails = () => {
 
 
     const homeLoanSubmission = () => {
-        setHomeLoanFormData(homeLoan)
         const oldLoanData = JSON.parse(localStorage.getItem("Loan")) || []
         
         const loanData = [...oldLoanData, homeLoan]
